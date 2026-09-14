@@ -1,0 +1,933 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --black: #090909;
+  --black-2: #111111;
+  --white: #f4f1e8;
+  --muted: #aaa69c;
+  --saffron: #e87520;
+  --red: #a92818;
+  --border: rgba(244, 241, 232, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+}
+
+.site {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 28px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.logo,
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo span img{
+  width: 45px;
+}
+
+.logo > span,
+.footer-logo > span {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  /* border: 1px solid var(--saffron); */
+  color: var(--saffron);
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo strong,
+.footer-logo strong {
+  display: block;
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 20px;
+}
+
+.logo small,
+.footer-logo small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar nav a {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 14px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--saffron);
+}
+
+.nav-btn,
+.primary-btn {
+  display: inline-flex;
+  padding: 14px 24px;
+  background: var(--saffron);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+  background: var(--red);
+  transform: translateY(-3px);
+}
+
+.outline-btn {
+  padding: 13px 24px;
+  border: 1px solid rgba(255,255,255,0.5);
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.outline-btn:hover {
+  border-color: var(--saffron);
+  color: var(--saffron);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.3)),
+    linear-gradient(0deg, rgba(0,0,0,.8), transparent);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ align-items: center;
+ text-align: center;
+ margin-left: 30%;
+ margin-top: 10px;
+ 
+ 
+}
+
+.eyebrow,
+.section-label {
+  color: var(--saffron);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.jagdamb-photo{
+  height: 180px;
+  width: 180px;
+}
+.jagdamb-photo img{
+ height: 180px;
+  width: 180px;
+}
+
+
+.hero h1 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: clamp(80px, 10vw, 80px);
+  line-height: 0.8;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-top: 10px;
+}
+
+.hero h1 span {
+  display: block;
+  font-size: clamp(20px, 3vw, 25px);
+  letter-spacing: 0;
+  margin-top: 5px;
+  color: var(--saffron);
+}
+
+.hero-description {
+  margin-top: 15px;
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.hero-bottom div {
+  height: 1px;
+  width: 80px;
+  background: var(--saffron);
+}
+
+/* ================= INTRO ================= */
+
+.intro {
+  padding: 50px 8%;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  background: var(--black);
+}
+
+.section-number {
+  color: var(--saffron);
+  font-size: 13px;
+}
+
+.intro-content {
+  max-width: 800px;
+}
+
+.intro h2,
+.section-heading-left h2,
+.gallery-heading-left h2,
+.join h2,
+.contact h2 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: clamp(45px, 6vw, 90px);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.intro h2 span,
+.section-heading-left h2 span,
+.join h2 span,
+.contact h2 span {
+  color: var(--muted);
+}
+
+.large-text {
+  max-width: 750px;
+  margin-top: 50px;
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 24px;
+  line-height: 1.7;
+}
+
+.body-text {
+  max-width: 650px;
+  margin-top: 25px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.tradition-cards {
+  min-height: 300px;
+  padding: 20px;
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: 0.4s;
+}
+.tradition-cards img{
+  height: 200px;
+  width: 200px;
+  
+}
+
+.tradition-cards h2{
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 30px;
+  /* margin-top: 10px; */
+   color: var(--saffron);
+   text-align: center;
+}
+.tradition-cards p{
+  text-align: center;
+}
+
+/* ================= STATS ================= */
+/* 
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat {
+  padding: 55px 40px;
+  border-right: 1px solid var(--border);
+}
+
+.stat strong {
+  display: block;
+  font-family: "Anton", sans-serif;
+  font-size: 55px;
+  color: var(--saffron);
+}
+
+.stat span {
+  color: var(--muted);
+  font-family: "Noto Sans Devanagari", sans-serif;
+} */
+
+/* ================= TRADITION ================= */
+
+.tradition,
+.journey,
+.gallery-section {
+  padding: 40px 8%;
+}
+
+.main-section-heading{
+  max-width: 900px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.section-heading-left {
+  max-width: 70%;
+  /* border: 1px solid white; */
+}
+
+.tradition-grid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.tradition-card {
+  min-height: 100px;
+  padding: 20px;
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: 0.4s;
+}
+
+.tradition-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--saffron);
+}
+
+/* .tradition-card.featured {
+  background: var(--saffron);
+} */
+
+.card-number {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  opacity: 0.5;
+}
+
+
+.instrument {
+  /* font-size: 65px; */
+  margin-top: 20px;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  object-fit: cover;
+}
+.instrument img{
+  width: full;
+  height: 300px;
+  
+}
+.tradition-card h3{
+   margin-top: 10px;
+  color: #bbb;
+  line-height: 1.7;
+   text-align: center;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.tradition-card h2 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 40px;
+  margin-top: 2px;
+   color: var(--saffron);
+   text-align: center;
+   
+}
+
+.tradition-card p {
+  margin-top: 2px;
+  color: #bbb;
+  line-height: 1.7;
+   text-align: center;
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.featured p {
+  color: white;
+}
+
+/* ================= JOURNEY ================= */
+
+.journey {
+  background: #0d0d0d;
+}
+
+.timeline {
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item > span {
+  color: var(--saffron);
+}
+
+.timeline-item h3 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 30px;
+}
+
+.timeline-item p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.gallery-heading h2 span {
+  color: var(--saffron);
+}
+
+.gallery-heading > p {
+  color: var(--muted);
+  font-family: "Noto Sans Devanagari", sans-serif;
+  line-height: 1.8;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-2 {
+  margin-top: 100px;
+}
+
+.gallery-3 {
+  margin-top: -50px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: linear-gradient(transparent, rgba(0,0,0,.8));
+}
+
+.gallery-overlay span {
+  color: var(--saffron);
+}
+
+.gallery-overlay h3 {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 28px;
+}
+
+/* ================= JOIN ================= */
+
+.join {
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  overflow: hidden;
+}
+
+.join-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.join-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.join p:not(.section-label) {
+  margin: 35px 0;
+  max-width: 600px;
+  color: #ccc;
+  font-family: "Noto Sans Devanagari", sans-serif;
+  line-height: 1.8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.contact-right {
+  border-top: 1px solid var(--border);
+}
+
+.contact-row {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-row span {
+  color: var(--muted);
+}
+
+.contact-row strong {
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 25px;
+  border: 1px solid var(--saffron);
+  color: var(--saffron);
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background: var(--saffron);
+  color: white;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 20px 8%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+footer p {
+  color: var(--muted);
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 13px;
+}
+
+footer > span {
+  color: #777;
+  font-size: 11px;
+}
+
+
+
+/* ================= MOBILE ================= */
+
+
+
+/* =========================
+   HERO RESPONSIVE - 800px
+========================= */
+
+@media (max-width: 800px) {
+
+  .hero {
+    min-height: 100svh;
+    padding: 0 5%;
+    justify-content: center;
+  }
+
+  /* Background Image */
+  .hero-image img {
+    object-position: center;
+  }
+
+  /* Darker overlay for readability */
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.85)
+      );
+  }
+
+  /* Hero Content */
+  .hero-content {
+    min-height: auto;
+
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Jagdamb Logo */
+  .jagdamb-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .jagdamb-photo img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+  }
+
+  /* Main Heading */
+  .hero h1 {
+    font-size: clamp(55px, 12vw, 75px);
+    line-height: 0.9;
+    letter-spacing: -1px;
+    margin-top: 15px;
+  }
+
+  .hero h1 span {
+    font-size: clamp(18px, 4vw, 24px);
+    margin-top: 10px;
+  }
+
+  /* Description */
+  .hero-description {
+    max-width: 90%;
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    margin-top: 25px;
+    gap: 12px;
+  }
+
+  .hero-buttons .primary-btn,
+  .hero-buttons .outline-btn {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+
+  /* Bottom Text */
+  .hero-bottom {
+    bottom: 18px;
+    left: 5%;
+    right: 5%;
+    gap: 10px;
+    font-size: 9px;
+  }
+
+  .hero-bottom div {
+    width: 45px;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar nav,
+  .nav-btn {
+    display: none;
+  }
+
+  .hero {
+    padding: 0 25px;
+  }
+
+  .hero h1 {
+    font-size: 80px;
+    letter-spacing: -4px;
+  }
+
+  .hero h1 span {
+    font-size: 25px;
+  }
+
+  .intro {
+    padding: 100px 25px;
+    display: block;
+  }
+
+  .section-number {
+    margin-bottom: 40px;
+  }
+
+  .large-text {
+    font-size: 19px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat {
+    padding: 35px 25px;
+  }
+
+  .tradition,
+  .journey,
+  .gallery-section {
+    padding: 100px 25px;
+  }
+
+  .tradition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-heading {
+    display: block;
+  }
+
+  .gallery-heading > p {
+    margin-top: 25px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 450px;
+  }
+
+  .gallery-2,
+  .gallery-3 {
+    margin-top: 0;
+  }
+
+  .contact {
+    padding: 100px 25px;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  footer {
+    padding: 15px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+/* =========================
+   MAIN SECTION - 800px
+========================= */
+
+@media (max-width: 800px) {
+
+  .main-section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 50px 5%;
+  }
+
+  /* Left Heading */
+
+  .section-heading-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-heading-left .section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .section-heading-left h2 {
+    font-size: clamp(42px, 9vw, 65px);
+    line-height: 1.1;
+  }
+
+
+  /* Right Side */
+
+  .main-section-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  /* Card */
+
+  .tradition-cards {
+    width: 100%;
+    max-width: 350px;
+    min-height: auto;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  /* Person Image */
+
+  .tradition-cards .instruments {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tradition-cards img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+
+  /* Name */
+
+  .tradition-cards h2 {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  .tradition-cards p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+}
+
