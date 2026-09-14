@@ -4,6 +4,12 @@ import ganeshotsav from "./assets/ganeshutsav.jpeg";
 import vadan from "./assets/vadana.jpeg";
 import jallosh from "./assets/utsava.jpeg";
 import jagdamb from "./assets/jagdamb.png";
+import atharv from './assets/atharv.jpeg'
+import manav from './assets/Manav.jpeg'
+import piyush from './assets/Piyusha.jpeg'
+import pavan from './assets/pavanCharde.jpeg'
+
+
 
 const gallery = [
   {
@@ -35,7 +41,7 @@ function App() {
       {/* NAVBAR */}
       <header className="navbar">
         <div className="logo">
-          <span><img src="\src\assets\jagdamb.png" alt="" /></span>
+          <span><img src={jagdamb} alt="जगदंब" /></span>
           <div>
             <strong>जगदंब</strong>
             <small>ढोल ताशा पथक</small>
@@ -177,7 +183,7 @@ function App() {
         
           <div className="tradition-cards">
             {/* <div className="card-number">०१</div> */}
-            <div className="instruments"><img src="\src\assets\pavanCharde.jpeg" alt="" /></div>
+            <div className="instruments"><img src={pavan} alt="जगदंब" /></div>
             <h2>पवन चारदे</h2>
             <p>पथक प्रमुख</p>
             
@@ -192,7 +198,7 @@ function App() {
 
           <div className="tradition-card">
             {/* <div className="card-number">०१</div> */}
-            <div className="instrument"><img src="\src\assets\Manav.jpeg" alt="" /></div>
+            <div className="instrument"><img src={manav} alt="जगदंब" /></div>
             <h3>मानव सोंटक्के</h3>
             <h2>ढोल</h2>
             <p>
@@ -202,7 +208,7 @@ function App() {
 
           <div className="tradition-card featured">
             {/* <div className="card-number">०२</div> */}
-            <div className="instrument"><img src="\src\assets\Piyusha.jpeg" alt="" /></div>
+            <div className="instrument"><img src={piyush} alt="जगदंब" /></div>
              <h3>पियुष चौधरी</h3>
             <h2>ताशा</h2>
             <p>
@@ -212,7 +218,7 @@ function App() {
 
           <div className="tradition-card">
             {/* <div className="card-number">०३</div> */}
-            <div className="instrument"><img src="\src\assets\atharv.jpeg" alt="" /></div>
+            <div className="instrument"><img src={atharv} alt="जगदंब" /></div>
             <h3>अथर्व पानबुडे</h3>
             <h2>ध्वज</h2>
             <p>
@@ -383,7 +389,7 @@ function App() {
       <footer>
 
         <div className="footer-logo logo">
-          <span><img src="\src\assets\jagdamb.png" alt="" /></span>
+          <span><img src={jagdamb} alt="जगदंब" /></span>
           <div>
             <strong>जगदंब</strong>
             <small>ढोल ताशा पथक </small>
