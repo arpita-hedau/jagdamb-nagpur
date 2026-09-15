@@ -38,101 +38,6 @@ a {
 
 /* ================= NAVBAR ================= */
 
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 28px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 10;
-}
-
-.logo,
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo span img{
-  width: 45px;
-}
-
-.logo > span,
-.footer-logo > span {
-  width: 45px;
-  height: 45px;
-  display: grid;
-  place-items: center;
-  /* border: 1px solid var(--saffron); */
-  color: var(--saffron);
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.logo strong,
-.footer-logo strong {
-  display: block;
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 20px;
-}
-
-.logo small,
-.footer-logo small {
-  display: block;
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.navbar nav {
-  display: flex;
-  gap: 35px;
-}
-
-.navbar nav a {
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 14px;
-  color: #ddd;
-  transition: 0.3s;
-}
-
-.navbar nav a:hover {
-  color: var(--saffron);
-}
-
-.nav-btn,
-.primary-btn {
-  display: inline-flex;
-  padding: 14px 24px;
-  background: var(--saffron);
-  color: white;
-  font-size: 13px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.nav-btn:hover,
-.primary-btn:hover {
-  background: var(--red);
-  transform: translateY(-3px);
-}
-
-.outline-btn {
-  padding: 13px 24px;
-  border: 1px solid rgba(255,255,255,0.5);
-  font-size: 13px;
-  transition: 0.3s;
-}
-
-.outline-btn:hover {
-  border-color: var(--saffron);
-  color: var(--saffron);
-}
 
 /* ================= HERO ================= */
 
@@ -153,105 +58,26 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* object-position: center; */
 }
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.3)),
-    linear-gradient(0deg, rgba(0,0,0,.8), transparent);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- align-items: center;
- text-align: center;
- margin-left: 30%;
- margin-top: 10px;
- 
- 
-}
-
-.eyebrow,
-.section-label {
-  color: var(--saffron);
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.jagdamb-photo{
-  height: 180px;
-  width: 180px;
-}
-.jagdamb-photo img{
- height: 180px;
-  width: 180px;
-}
-
-
-.hero h1 {
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: clamp(80px, 10vw, 80px);
-  line-height: 0.8;
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin-top: 10px;
-}
-
-.hero h1 span {
-  display: block;
-  font-size: clamp(20px, 3vw, 25px);
-  letter-spacing: 0;
-  margin-top: 5px;
-  color: var(--saffron);
-}
-
-.hero-description {
-  margin-top: 15px;
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 18px;
-  color: #ddd;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 35px;
-}
-
-.hero-bottom {
-  position: absolute;
-  bottom: 30px;
-  left: 8%;
-  right: 8%;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: #aaa;
-  font-size: 11px;
-}
-
-.hero-bottom div {
-  height: 1px;
-  width: 80px;
-  background: var(--saffron);
-}
-
 /* ================= INTRO ================= */
 
 .intro {
-  padding: 50px 8%;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  background: var(--black);
+  min-height: 650px;
+  padding: 80px 8%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
 }
+
 
 .section-number {
   color: var(--saffron);
@@ -296,7 +122,7 @@ a {
 }
 
 .tradition-cards {
-  min-height: 300px;
+  min-height: 400px;
   padding: 20px;
   background: var(--black-2);
   border: 1px solid var(--border);
@@ -304,8 +130,8 @@ a {
   transition: 0.4s;
 }
 .tradition-cards img{
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   
 }
 
@@ -320,31 +146,6 @@ a {
   text-align: center;
 }
 
-/* ================= STATS ================= */
-/* 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.stat {
-  padding: 55px 40px;
-  border-right: 1px solid var(--border);
-}
-
-.stat strong {
-  display: block;
-  font-family: "Anton", sans-serif;
-  font-size: 55px;
-  color: var(--saffron);
-}
-
-.stat span {
-  color: var(--muted);
-  font-family: "Noto Sans Devanagari", sans-serif;
-} */
 
 /* ================= TRADITION ================= */
 
@@ -363,19 +164,40 @@ a {
 }
 
 .section-heading-left {
-  max-width: 70%;
-  /* border: 1px solid white; */
+  min-height: 400px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.section-heading-left h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading-left .section-label {
+  position: relative;
+  z-index: 2;
 }
 
 .tradition-grid {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  width: 200px;
 }
 
 .tradition-card {
-  min-height: 100px;
+   width: 250px;
+  height: 400px;
   padding: 20px;
   background: var(--black-2);
   border: 1px solid var(--border);
@@ -410,7 +232,7 @@ a {
 }
 .instrument img{
   width: full;
-  height: 300px;
+  height: 200px;
   
 }
 .tradition-card h3{
@@ -423,7 +245,7 @@ a {
 
 .tradition-card h2 {
   font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 2px;
    color: var(--saffron);
    text-align: center;
@@ -443,9 +265,15 @@ a {
 }
 
 /* ================= JOURNEY ================= */
-
 .journey {
-  background: #0d0d0d;
+  padding: 100px 8%;
+  min-height: 600px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
 }
 
 .timeline {
@@ -496,12 +324,12 @@ a {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .gallery-item {
-  height: 550px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -528,7 +356,7 @@ a {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -541,42 +369,14 @@ a {
 
 .gallery-overlay h3 {
   font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 /* ================= JOIN ================= */
 
-.join {
-  min-height: 700px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 100px 10%;
-  overflow: hidden;
-}
 
-.join-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.25)),
-    url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=2000&q=85")
-    center/cover;
-}
 
-.join-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-}
 
-.join p:not(.section-label) {
-  margin: 35px 0;
-  max-width: 600px;
-  color: #ccc;
-  font-family: "Noto Sans Devanagari", sans-serif;
-  line-height: 1.8;
-}
 
 /* ================= CONTACT ================= */
 
@@ -642,6 +442,25 @@ footer > span {
   color: #777;
   font-size: 11px;
 }
+.footer-logo img{
+    width: 30px;
+    height: 30px;
+  }
+ .footer-logo {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 5px;
+  font-size: 15px;
+ } 
+ .parampara span{
+  font-size: 12px;
+ }
+ .parampara h6{
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 5px;
+ }
+
 
 
 
@@ -664,119 +483,21 @@ footer > span {
   /* Background Image */
   .hero-image img {
     object-position: center;
-  }
-
-  /* Darker overlay for readability */
-  .hero-overlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.75),
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.85)
-      );
-  }
-
-  /* Hero Content */
-  .hero-content {
-    min-height: auto;
-
     width: 100%;
-    margin-left: 0;
-    margin-top: 30px;
-
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
   }
-
-  /* Jagdamb Logo */
-  .jagdamb-photo {
-    width: 140px;
-    height: 140px;
-  }
-
-  .jagdamb-photo img {
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-  }
-
-  /* Main Heading */
-  .hero h1 {
-    font-size: clamp(55px, 12vw, 75px);
-    line-height: 0.9;
-    letter-spacing: -1px;
-    margin-top: 15px;
-  }
-
-  .hero h1 span {
-    font-size: clamp(18px, 4vw, 24px);
-    margin-top: 10px;
-  }
-
-  /* Description */
-  .hero-description {
-    max-width: 90%;
-    margin-top: 18px;
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  /* Buttons */
-  .hero-buttons {
-    margin-top: 25px;
-    gap: 12px;
-  }
-
-  .hero-buttons .primary-btn,
-  .hero-buttons .outline-btn {
-    padding: 12px 18px;
-    font-size: 12px;
-  }
-
-  /* Bottom Text */
-  .hero-bottom {
-    bottom: 18px;
-    left: 5%;
-    right: 5%;
-    gap: 10px;
-    font-size: 9px;
-  }
-
-  .hero-bottom div {
-    width: 45px;
-  }
-
 }
 
 @media (max-width: 800px) {
 
-  .navbar {
-    padding: 20px;
-  }
 
-  .navbar nav,
-  .nav-btn {
-    display: none;
-  }
-
-  .hero {
-    padding: 0 25px;
-  }
-
-  .hero h1 {
-    font-size: 80px;
-    letter-spacing: -4px;
-  }
-
-  .hero h1 span {
-    font-size: 25px;
-  }
 
   .intro {
-    padding: 100px 25px;
+    padding: 50px 20px;
     display: block;
+    text-align: center;
+
   }
 
   .section-number {
@@ -787,18 +508,12 @@ footer > span {
     font-size: 19px;
   }
 
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stat {
-    padding: 35px 25px;
-  }
 
   .tradition,
   .journey,
   .gallery-section {
-    padding: 100px 25px;
+    padding: 10px 25px;
+    
   }
 
   .tradition-grid {
@@ -814,11 +529,11 @@ footer > span {
   }
 
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2,1fr);
   }
 
   .gallery-item {
-    height: 450px;
+    height: 200px;
   }
 
   .gallery-2,
@@ -827,7 +542,7 @@ footer > span {
   }
 
   .contact {
-    padding: 100px 25px;
+    padding: 40px 25px;
     grid-template-columns: 1fr;
     gap: 60px;
   }
@@ -837,6 +552,10 @@ footer > span {
     flex-direction: column;
     align-items: flex-start;
   }
+  .footer-logo img{
+    width: 30px;
+    height: 30px;
+  }
 
   .hero-buttons {
     flex-wrap: wrap;
@@ -845,17 +564,29 @@ footer > span {
 
 
 
+
 /* =========================
    MAIN SECTION - 800px
 ========================= */
 
 @media (max-width: 800px) {
+  .hero-image img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
 
+@media (max-width: 800px) {
+
+.main-section-heading{
+ display: flex;
+ align-items: center;
+}
   .main-section-heading {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    padding: 50px 5%;
+    padding: 10px 5%;
   }
 
   /* Left Heading */
@@ -863,6 +594,9 @@ footer > span {
   .section-heading-left {
     width: 100%;
     text-align: center;
+    min-height: 350px;
+    padding: 35px 25px;
+    background-position: center;
   }
 
   .section-heading-left .section-label {
@@ -901,6 +635,7 @@ footer > span {
   }
 
 
+
   /* Person Image */
 
   .tradition-cards .instruments {
@@ -929,5 +664,20 @@ footer > span {
     margin-top: 5px;
   }
 
+}
+
+@media (max-width: 800px) {
+  .tradition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tradition-grid{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+
+  }
 }
 

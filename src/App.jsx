@@ -1,122 +1,103 @@
-
 import "./App.css";
 import ganeshotsav from "./assets/ganeshutsav.jpeg";
 import vadan from "./assets/vadana.jpeg";
 import jallosh from "./assets/utsava.jpeg";
 import jagdamb from "./assets/jagdamb.png";
-import atharv from './assets/atharv.jpeg'
-import manav from './assets/Manav.jpeg'
-import piyush from './assets/Piyusha.jpeg'
-import pavan from './assets/pavanCharde.jpeg'
+import atharv from "./assets/atharv.jpeg";
+import manav from "./assets/Manav.jpeg";
+import piyush from "./assets/piyush.jpeg";
+import pavan from "./assets/pavanCharde.jpeg";
+import heroPotrait from "./assets/potrait.jpeg";
+import heroLandscape from "./assets/landscape.jpeg";
+import Maharaj from "./assets/shivajiMaharaj.jpeg";
+import sher from "./assets/sher.jpeg";
+import devanshu from "./assets/devanshu.jpeg";
+import journeyImage from "./assets/journeyImage.jpeg";
+import contactImage from "./assets/contactImage.jpeg";
+
+import img2 from "./assets/img-2.jpeg";
+import img4 from "./assets/img-4.jpeg";
+import img5 from "./assets/img-5.jpeg";
+import img3 from "./assets/img-3.jpeg";
+import img6 from "./assets/img-6.jpeg";
+import img7 from "./assets/img-7.jpeg";
+
+
+
+
+
+
 
 
 
 const gallery = [
   {
-    image:
-      ganeshotsav,
+    image: ganeshotsav,
     title: "गणेशोत्सव",
   },
   {
-    image:
-      vadan,
+    image: vadan,
     title: "वादनाची झलक",
   },
   {
-    image:
-      jallosh,
+    image: img2,
     title: "उत्सवाचा जल्लोष",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80",
+      img6,
     title: "पथकाची ऊर्जा",
+  },
+   {
+    image:
+      img7,
+    title: "उत्साहाची लय",
+  },
+   {
+    image:
+      img3,
+    title: "परंपरेचा अभिमान",
+  },
+   {
+    image:
+      img4,
+    title: "परंपरेची शान",
+  },
+   {
+    image:
+      img5,
+    title: "जोशाची गर्जना",
   },
 ];
 
 function App() {
   return (
     <div className="site">
-
-      {/* NAVBAR */}
-      <header className="navbar">
-        <div className="logo">
-          <span><img src={jagdamb} alt="जगदंब" /></span>
-          <div>
-            <strong>जगदंब</strong>
-            <small>ढोल ताशा पथक</small>
-            <small>2019</small>
-          </div>
-        </div>
-
-        <nav>
-          <a href="#about">आमच्याबद्दल</a>
-          <a href="#tradition">परंपरा</a>
-          <a href="#gallery">गॅलरी</a>
-          <a href="#contact">संपर्क</a>
-        </nav>
-
-        <a href="#contact" className="nav-btn">
-          सहभागी व्हा
-        </a>
-      </header>
-
       {/* HERO */}
       <section className="hero">
-
         <div className="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=2000&q=85"
-            alt="उत्सव"
-          />
+          <picture>
+            <source media="(max-width: 800px)" srcSet={heroPotrait} />
+
+            <img src={heroLandscape} alt="उत्सव" />
+          </picture>
         </div>
 
-        <div className="hero-overlay"></div>
-
-        <div className="hero-content">
-
-          {/* <p className="eyebrow">नागपूर • महाराष्ट्र</p> */}
-           
-           <div className="jagdamb-photo">
-         <img src={jagdamb} alt="जगदंब" />
-           </div>
-
-          <h1>
-            जगदंब
-            <span>ढोल ताशा पथक</span>
-          </h1>
-
-          <p className="hero-description">
-            परंपरेचा नाद • संस्कृतीचा अभिमान • एकजुटीची ओळख
-          </p>
-
-          <div className="hero-buttons">
-            <a href="#about" className="primary-btn">
-              आमच्याबद्दल ↓
-            </a>
-
-            <a href="#gallery" className="outline-btn">
-              गॅलरी पाहा
-            </a>
-          </div>
-
-        </div>
-
-        <div className="hero-bottom">
-          <span>०१</span>
-          <div></div>
-          <span>परंपरेचा प्रवास</span>
-        </div>
-
+      
       </section>
 
       {/* INTRO */}
-      <section className="intro" id="about">
-
-        <div className="section-number">०१</div>
+      <section className="intro" id="about"
+       style={{
+    backgroundImage: `linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(${Maharaj})`,
+  }}
+      >
+        
 
         <div className="intro-content">
-
           <p className="section-label">जगदंब विषयी</p>
 
           <h2>
@@ -126,113 +107,103 @@ function App() {
           </h2>
 
           <p className="large-text">
-            ढोल-ताशाच्या गजरातून महाराष्ट्राची समृद्ध परंपरा,
-            संस्कृती आणि एकजुटीची भावना जपण्याचा जगदंबचा प्रयत्न.
+            ढोल-ताशाच्या गजरातून महाराष्ट्राची समृद्ध परंपरा, संस्कृती आणि
+            एकजुटीची भावना जपण्याचा जगदंबचा प्रयत्न.
           </p>
 
           <p className="body-text">
-            शिस्त, समर्पण, ऊर्जा आणि टीमवर्क या मूल्यांवर उभे असलेले
-            जगदंब ढोल ताशा पथक विविध उत्सव आणि सांस्कृतिक कार्यक्रमांमध्ये
-            आपल्या वादनातून एक वेगळीच ऊर्जा निर्माण करते.
+            शिस्त, समर्पण, ऊर्जा आणि टीमवर्क या मूल्यांवर उभे असलेले जगदंब ढोल
+            ताशा पथक विविध उत्सव आणि सांस्कृतिक कार्यक्रमांमध्ये आपल्या वादनातून
+            एक वेगळीच ऊर्जा निर्माण करते.
           </p>
-
         </div>
-
-       
       </section>
 
-      {/* STATS */}
-      {/* <section className="stats">
-
-        <div className="stat">
-          <strong>०१</strong>
-          <span>एक परिवार</span>
-        </div>
-
-        <div className="stat">
-          <strong>∞</strong>
-          <span>अखंड ऊर्जा</span>
-        </div>
-
-        <div className="stat">
-          <strong>🥁</strong>
-          <span>एकच नाद</span>
-        </div>
-
-        <div className="stat">
-          <strong>🚩</strong>
-          <span>एकच अभिमान</span>
-        </div>
-
-      </section> */}
 
       {/* TRADITION */}
       <section className="tradition" id="tradition">
-       <div className="main-section-heading">
-        <div className="section-heading-left">
-          <p className="section-label">आमची ओळख</p>
+        <div className="main-section-heading">
+          <div className="section-heading-left"
+          style={{
+    backgroundImage: `
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url(${sher})
+    `,
+  }}
+          >
+            <p className="section-label">आमची ओळख</p>
 
-          <h2>
-            तीन गोष्टी,
-            <br />
-            <span>एकच भावना.</span>
-          </h2>
-        </div>
-
-        <div className="main-section-right">
-        
-          <div className="tradition-cards">
-            {/* <div className="card-number">०१</div> */}
-            <div className="instruments"><img src={pavan} alt="जगदंब" /></div>
-            <h2>पवन चारदे</h2>
-            <p>पथक प्रमुख</p>
-            
-            
+            <h2>
+              तीन गोष्टी,
+              <br />
+              <span>एकच भावना.</span>
+            </h2>
           </div>
-        
 
+          <div className="main-section-right">
+            <div className="tradition-cards">
+              {/* <div className="card-number">०१</div> */}
+              <div className="instruments">
+                <img src={pavan} alt="जगदंब" />
+              </div>
+              <h2>पवन चारदे</h2>
+              <p>पथक प्रमुख</p>
+            </div>
+          </div>
         </div>
-       </div> 
 
         <div className="tradition-grid">
-
+           <div className="tradition-card">
+            {/* <div className="card-number">०३</div> */}
+            <div className="instrument">
+              <img src={atharv} alt="जगदंब" />
+            </div>
+            <h3>अथर्व पानबुडे</h3>
+            <h2>ध्वज प्रमुख</h2>
+            <p>परंपरा, अभिमान आणि एकजुटीचे प्रतीक.</p>
+          </div>
           <div className="tradition-card">
             {/* <div className="card-number">०१</div> */}
-            <div className="instrument"><img src={manav} alt="जगदंब" /></div>
+            <div className="instrument">
+              <img src={manav} alt="जगदंब" />
+            </div>
             <h3>मानव सोंटक्के</h3>
-            <h2>ढोल</h2>
-            <p>
-              प्रत्येक ठोक्यात ऊर्जा, जोश आणि उत्साह.
-            </p>
+            <h2>ढोल प्रमुख</h2>
+            <p>प्रत्येक ठोक्यात ऊर्जा, जोश आणि उत्साह.</p>
+          </div>
+
+          
+
+           <div className="tradition-card">
+            {/* <div className="card-number">०१</div> */}
+            <div className="instrument">
+              <img src={devanshu} alt="जगदंब" />
+            </div>
+            <h3>देवांशु धवाड</h3>
+            <h2>ताशा प्रमुख</h2>
+            <p>ताशाच्या गजरात जागतो उत्सवाचा जोश.</p>
           </div>
 
           <div className="tradition-card featured">
             {/* <div className="card-number">०२</div> */}
-            <div className="instrument"><img src={piyush} alt="जगदंब" /></div>
-             <h3>पियुष चौधरी</h3>
-            <h2>ताशा</h2>
-            <p>
-              ताल आणि लयीतून निर्माण होणारा उत्सवाचा नाद.
-            </p>
+            <div className="instrument">
+              <img src={piyush} alt="जगदंब" />
+            </div>
+            <h3>पियुष चौधरी</h3>
+            <h2>ताशा प्रमुख</h2>
+            <p>ताल आणि लयीतून निर्माण होणारा उत्सवाचा नाद.</p>
           </div>
 
-          <div className="tradition-card">
-            {/* <div className="card-number">०३</div> */}
-            <div className="instrument"><img src={atharv} alt="जगदंब" /></div>
-            <h3>अथर्व पानबुडे</h3>
-            <h2>ध्वज</h2>
-            <p>
-              परंपरा, अभिमान आणि एकजुटीचे प्रतीक.
-            </p>
-          </div>
-
+         
         </div>
-
       </section>
 
       {/* JOURNEY */}
-      <section className="journey">
-
+      <section className="journey"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${contactImage})`,
+  }}
+      >
         <div className="section-heading">
           <p className="section-label">आमचा प्रवास</p>
 
@@ -244,14 +215,11 @@ function App() {
         </div>
 
         <div className="timeline">
-
           <div className="timeline-item">
             <span>०१</span>
             <div>
               <h3>सुरुवात</h3>
-              <p>
-                एका विचारातून सुरू झालेला हा प्रवास.
-              </p>
+              <p>एका विचारातून सुरू झालेला हा प्रवास.</p>
             </div>
           </div>
 
@@ -259,9 +227,7 @@ function App() {
             <span>०२</span>
             <div>
               <h3>एकजूट</h3>
-              <p>
-                वादनासोबत वाढत गेलेले नाते आणि टीमवर्क.
-              </p>
+              <p>वादनासोबत वाढत गेलेले नाते आणि टीमवर्क.</p>
             </div>
           </div>
 
@@ -269,19 +235,14 @@ function App() {
             <span>०३</span>
             <div>
               <h3>नवीन पर्व</h3>
-              <p>
-                परंपरा जपत नव्या पिढीसोबत पुढे जाण्याचा संकल्प.
-              </p>
+              <p>परंपरा जपत नव्या पिढीसोबत पुढे जाण्याचा संकल्प.</p>
             </div>
           </div>
-
         </div>
-
       </section>
 
       {/* GALLERY */}
       <section className="gallery-section" id="gallery">
-
         <div className="gallery-heading">
           <div>
             <p className="section-label">आमच्या आठवणी</p>
@@ -298,12 +259,8 @@ function App() {
         </div>
 
         <div className="gallery">
-
           {gallery.map((item, index) => (
-            <div
-              className={`gallery-item gallery-${index + 1}`}
-              key={index}
-            >
+            <div className={`gallery-item gallery-${index + 1}`} key={index}>
               <img src={item.image} alt={item.title} />
 
               <div className="gallery-overlay">
@@ -312,9 +269,7 @@ function App() {
               </div>
             </div>
           ))}
-
         </div>
-
       </section>
 
       {/* JOIN */}
@@ -346,10 +301,14 @@ function App() {
       </section> */}
 
       {/* CONTACT */}
-      <section className="contact" id="contact">
-
+      <section className="contact" id="contact"
+      style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${journeyImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}>
         <div className="contact-left">
-
           <p className="section-label">संपर्क</p>
 
           <h2>
@@ -357,11 +316,9 @@ function App() {
             <br />
             <span>एकत्र नाद करूया.</span>
           </h2>
-
         </div>
 
         <div className="contact-right">
-
           <div className="contact-row">
             <span>स्थान</span>
             <strong>नागपूर, महाराष्ट्र</strong>
@@ -377,37 +334,37 @@ function App() {
             <strong>+91 91457 97993</strong>
           </div>
 
-          <a href="https://www.instagram.com/jagdamb_nagpur?stkn=MThjMzdpYWtzNmk3Zg==" className="contact-button">
+          <a
+            href="https://www.instagram.com/jagdamb_nagpur?stkn=MThjMzdpYWtzNmk3Zg=="
+            className="contact-button"
+          >
             Instagram वर भेट द्या ↗
           </a>
-
         </div>
-
       </section>
 
       {/* FOOTER */}
       <footer>
-
         <div className="footer-logo logo">
-          <span><img src={jagdamb} alt="जगदंब" /></span>
+          <span>
+            <img src={jagdamb} alt="जगदंब" />
+          </span>
           <div>
-            <strong>जगदंब</strong>
+            <strong>जगदंब</strong><br></br>
             <small>ढोल ताशा पथक </small>
             <small>2019</small>
           </div>
         </div>
 
-        <p>
-          परंपरेचा नाद जपूया. संस्कृती पुढे नेऊया.
-        </p>
+       <div className="parampara"> <p>परंपरेचा नाद जपूया. संस्कृती पुढे नेऊया.</p>
 
-        <span> जगदंब, नागपूर</span>
-
+        <span> जगदंब, नागपूर</span><br />
+        <h6>~created by Elvrix TechSolution</h6>
+        </div>
+       
       </footer>
-
     </div>
   );
 }
 
 export default App;
-
