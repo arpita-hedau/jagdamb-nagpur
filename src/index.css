@@ -1,6 +1,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap");
 
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
 :root {
   --black: #090909;
   --black-2: #111111;
@@ -10,6 +14,11 @@
   --red: #a92818;
   --border: rgba(244, 241, 232, 0.15);
 }
+
+
+/* =========================================================
+   RESET & GLOBAL STYLES
+========================================================= */
 
 * {
   margin: 0;
@@ -36,57 +45,10 @@ a {
   text-decoration: none;
 }
 
-/* ================= NAVBAR ================= */
 
-
-/* ================= HERO ================= */
-
-.hero {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-}
-
-.hero-image {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* object-position: center; */
-}
-/* ================= INTRO ================= */
-
-.intro {
-  min-height: 650px;
-  padding: 80px 8%;
-
-  display: flex;
-  align-items: center;
-
-  position: relative;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-}
-
-
-.section-number {
-  color: var(--saffron);
-  font-size: 13px;
-}
-
-.intro-content {
-  max-width: 800px;
-}
+/* =========================================================
+   COMMON TYPOGRAPHY
+========================================================= */
 
 .intro h2,
 .section-heading-left h2,
@@ -106,9 +68,70 @@ a {
   color: var(--muted);
 }
 
+.section-number {
+  color: var(--saffron);
+  font-size: 13px;
+}
+
+.section-label {
+  color: var(--saffron);
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+========================================================= */
+
+.intro {
+  min-height: 650px;
+  padding: 80px 8%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.intro-content {
+  max-width: 800px;
+}
+
 .large-text {
   max-width: 750px;
   margin-top: 50px;
+
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 24px;
   line-height: 1.7;
@@ -117,91 +140,76 @@ a {
 .body-text {
   max-width: 650px;
   margin-top: 25px;
+
   color: var(--muted);
   line-height: 1.8;
 }
 
-.tradition-cards {
-  min-height: 400px;
-  padding: 20px;
-  background: var(--black-2);
-  border: 1px solid var(--border);
-  position: relative;
-  transition: 0.4s;
-}
-.tradition-cards img{
-  height: 250px;
-  width: 250px;
-  
-}
 
-.tradition-cards h2{
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 30px;
-  /* margin-top: 10px; */
-   color: var(--saffron);
-   text-align: center;
-}
-.tradition-cards p{
-  text-align: center;
-}
-
-
-/* ================= TRADITION ================= */
+/* =========================================================
+   TRADITION SECTION
+========================================================= */
 
 .tradition,
 .journey,
 .gallery-section {
   padding: 40px 8%;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.main-section-heading{
-  max-width: 900px;
-    /* border: 1px solid white; */
-    display: flex;
-    justify-content: space-between;
 
+/* ---------- Main Heading ---------- */
+
+.main-section-heading {
+  max-width: 900px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .section-heading-left {
   min-height: 400px;
   padding: 50px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  position: relative;
 }
 
-.section-heading-left h2 {
-  position: relative;
-  z-index: 2;
-}
-
+.section-heading-left h2,
 .section-heading-left .section-label {
   position: relative;
   z-index: 2;
 }
 
+
+/* ---------- Tradition Grid ---------- */
+
 .tradition-grid {
   margin-top: 80px;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   gap: 5px;
-  width: 200px;
 }
 
+
+/* ---------- Tradition Card ---------- */
+
 .tradition-card {
-   width: 250px;
-  height: 400px;
   padding: 20px;
+
   background: var(--black-2);
   border: 1px solid var(--border);
+
   position: relative;
+
   transition: 0.4s;
 }
 
@@ -210,53 +218,67 @@ a {
   border-color: var(--saffron);
 }
 
-/* .tradition-card.featured {
-  background: var(--saffron);
-} */
+
+/* ---------- Card Number ---------- */
 
 .card-number {
   position: absolute;
   right: 30px;
   top: 30px;
+
   opacity: 0.5;
 }
 
 
+/* ---------- Instrument ---------- */
+
 .instrument {
-  /* font-size: 65px; */
   margin-top: 20px;
+
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
+}
+
+.instrument img {
+  width: 100%;
+  height: 200px;
+
   object-fit: cover;
 }
-.instrument img{
-  width: full;
-  height: 200px;
-  
-}
-.tradition-card h3{
-   margin-top: 10px;
+
+
+/* ---------- Card Text ---------- */
+
+.tradition-card h3 {
+  margin-top: 10px;
+
   color: #bbb;
   line-height: 1.7;
-   text-align: center;
+
+  text-align: center;
+
   font-family: "Noto Sans Devanagari", sans-serif;
 }
 
 .tradition-card h2 {
+  margin-top: 2px;
+
+  color: var(--saffron);
+
+  text-align: center;
+
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 35px;
-  margin-top: 2px;
-   color: var(--saffron);
-   text-align: center;
-   
 }
 
 .tradition-card p {
   margin-top: 2px;
+
   color: #bbb;
   line-height: 1.7;
-   text-align: center;
+
+  text-align: center;
+
   font-family: "Noto Sans Devanagari", sans-serif;
 }
 
@@ -264,27 +286,67 @@ a {
   color: white;
 }
 
-/* ================= JOURNEY ================= */
-.journey {
-  padding: 100px 8%;
-  min-height: 600px;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* =========================================================
+   TRADITION FEATURED CARD
+========================================================= */
+
+.tradition-cards {
+  min-height: 400px;
+  padding: 20px;
+
+  background: var(--black-2);
+  border: 1px solid var(--border);
+
+  position: relative;
+
+  transition: 0.4s;
+}
+
+.tradition-cards img {
+  width: 250px;
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.tradition-cards h2 {
+  color: var(--saffron);
+
+  text-align: center;
+
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 30px;
+}
+
+.tradition-cards p {
+  text-align: center;
+}
+
+
+/* =========================================================
+   JOURNEY SECTION
+========================================================= */
+
+.journey {
+  min-height: 600px;
+  padding: 100px 8%;
 
   color: white;
 }
 
 .timeline {
   margin-top: 60px;
+
   border-top: 1px solid var(--border);
 }
 
 .timeline-item {
   display: grid;
   grid-template-columns: 100px 1fr;
+
   padding: 30px 0;
+
   border-bottom: 1px solid var(--border);
 }
 
@@ -299,16 +361,22 @@ a {
 
 .timeline-item p {
   margin-top: 8px;
+
   color: var(--muted);
+
   font-family: "Noto Sans Devanagari", sans-serif;
 }
 
-/* ================= GALLERY ================= */
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
 
 .gallery-heading {
   display: flex;
   justify-content: space-between;
   align-items: end;
+
   margin-bottom: 70px;
 }
 
@@ -318,6 +386,7 @@ a {
 
 .gallery-heading > p {
   color: var(--muted);
+
   font-family: "Noto Sans Devanagari", sans-serif;
   line-height: 1.8;
 }
@@ -325,11 +394,13 @@ a {
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   gap: 20px;
 }
 
 .gallery-item {
   height: 300px;
+
   position: relative;
   overflow: hidden;
 }
@@ -342,10 +413,15 @@ a {
   margin-top: -50px;
 }
 
+
+/* ---------- Gallery Images ---------- */
+
 .gallery-item img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   transition: transform 0.8s;
 }
 
@@ -353,14 +429,23 @@ a {
   transform: scale(1.08);
 }
 
+
+/* ---------- Gallery Overlay ---------- */
+
 .gallery-overlay {
   position: absolute;
   inset: 0;
+
   padding: 10px;
+
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background: linear-gradient(transparent, rgba(0,0,0,.8));
+
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.8)
+  );
 }
 
 .gallery-overlay span {
@@ -372,18 +457,17 @@ a {
   font-size: 20px;
 }
 
-/* ================= JOIN ================= */
 
-
-
-
-
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
 
 .contact {
   padding: 80px 10%;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 100px;
 }
 
@@ -393,9 +477,12 @@ a {
 
 .contact-row {
   padding: 25px 0;
+
   border-bottom: 1px solid var(--border);
+
   display: flex;
   justify-content: space-between;
+
   gap: 20px;
 }
 
@@ -409,10 +496,13 @@ a {
 
 .contact-button {
   display: inline-block;
+
   margin-top: 40px;
   padding: 16px 25px;
+
   border: 1px solid var(--saffron);
   color: var(--saffron);
+
   transition: 0.3s;
 }
 
@@ -421,19 +511,26 @@ a {
   color: white;
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
   padding: 20px 8%;
+
   border-top: 1px solid var(--border);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   gap: 30px;
 }
 
 footer p {
   color: var(--muted);
+
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 13px;
 }
@@ -442,62 +539,70 @@ footer > span {
   color: #777;
   font-size: 11px;
 }
-.footer-logo img{
-    width: 30px;
-    height: 30px;
-  }
- .footer-logo {
+
+.footer-logo {
   display: flex;
-  /* flex-direction: column; */
   gap: 5px;
+
   font-size: 15px;
- } 
- .parampara span{
+}
+
+.footer-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.parampara span {
   font-size: 12px;
- }
- .parampara h6{
+}
+
+.parampara h6 {
+  margin-top: 5px;
+
   font-size: 10px;
   font-weight: 300;
-  margin-top: 5px;
- }
+}
 
 
-
-
-/* ================= MOBILE ================= */
-
-
-
-/* =========================
-   HERO RESPONSIVE - 800px
-========================= */
+/* =========================================================
+   MOBILE RESPONSIVE
+   MAX WIDTH: 800px
+========================================================= */
 
 @media (max-width: 800px) {
+
+  /* ---------- Hero ---------- */
 
   .hero {
     min-height: 100svh;
     padding: 0 5%;
+
     justify-content: center;
   }
 
-  /* Background Image */
   .hero-image img {
-    object-position: center;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+    object-position: center center;
   }
-}
-
-@media (max-width: 800px) {
 
 
+  /* ---------- Intro ---------- */
 
   .intro {
-    padding: 50px 20px;
-    display: block;
-    text-align: center;
+    min-height: auto;
 
+    padding: 50px 10px;
+
+    display: block;
+
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-size: 30px;
   }
 
   .section-number {
@@ -509,16 +614,152 @@ footer > span {
   }
 
 
+  /* ---------- Common Sections ---------- */
+
   .tradition,
   .journey,
   .gallery-section {
     padding: 10px 25px;
-    
+  }
+
+
+  /* ---------- Main Section Heading ---------- */
+
+  .main-section-heading {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+
+    padding: 10px 5%;
+  }
+
+  .section-heading-left {
+    width: 100%;
+
+    min-height: 350px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background-position: center;
+  }
+
+  .section-heading-left .section-label {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .section-heading-left h2 {
+    font-size: clamp(42px, 9vw, 65px);
+    line-height: 1.1;
+  }
+
+
+  /* ---------- Featured Card ---------- */
+
+  .main-section-right {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .tradition-cards {
+    width: 100%;
+    max-width: 350px;
+
+    min-height: auto;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tradition-cards .instruments {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .tradition-cards img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+  }
+
+  .tradition-cards h2 {
+    margin-top: 15px;
+    font-size: 25px;
+  }
+
+  .tradition-cards p {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+
+  /* ---------- Tradition Cards ---------- */
+
+  .tradition {
+    display: flex;
+    flex-direction: column;
   }
 
   .tradition-grid {
-    grid-template-columns: 1fr;
+    width: 100%;
+
+    margin-top: 40px;
+    margin-left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 5px;
   }
+
+  .tradition-card {
+    padding: 10px;
+  }
+
+  .tradition-card h3 {
+    margin-top: 2px;
+    font-size: 14px;
+  }
+
+  .tradition-card h2 {
+    margin-top: 1px;
+    font-size: 25px;
+  }
+
+  .tradition-card p {
+    font-size: 12px;
+  }
+
+  .instrument {
+    margin-top: 10px;
+  }
+
+  .instrument img {
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+  }
+
+
+  /* ---------- Gallery ---------- */
 
   .gallery-heading {
     display: block;
@@ -529,7 +770,7 @@ footer > span {
   }
 
   .gallery {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery-item {
@@ -541,143 +782,49 @@ footer > span {
     margin-top: 0;
   }
 
+
+  /* ---------- Journey ---------- */
+
+  .timeline-item {
+    grid-template-columns: 60px 1fr;
+
+    padding: 25px 0;
+  }
+
+  .timeline-item h3 {
+    font-size: 24px;
+  }
+
+
+  /* ---------- Contact ---------- */
+
   .contact {
     padding: 40px 25px;
+
     grid-template-columns: 1fr;
+
     gap: 60px;
   }
 
+
+  /* ---------- Footer ---------- */
+
   footer {
-    padding: 15px 15px;
+    padding: 15px;
+
     flex-direction: column;
     align-items: flex-start;
   }
-  .footer-logo img{
+
+  .footer-logo img {
     width: 30px;
     height: 30px;
   }
+
+
+  /* ---------- Hero Buttons ---------- */
 
   .hero-buttons {
     flex-wrap: wrap;
   }
 }
-
-
-
-
-/* =========================
-   MAIN SECTION - 800px
-========================= */
-
-@media (max-width: 800px) {
-  .hero-image img {
-    object-fit: cover;
-    object-position: center center;
-  }
-}
-
-@media (max-width: 800px) {
-
-.main-section-heading{
- display: flex;
- align-items: center;
-}
-  .main-section-heading {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    padding: 10px 5%;
-  }
-
-  /* Left Heading */
-
-  .section-heading-left {
-    width: 100%;
-    text-align: center;
-    min-height: 350px;
-    padding: 35px 25px;
-    background-position: center;
-  }
-
-  .section-heading-left .section-label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-  }
-
-  .section-heading-left h2 {
-    font-size: clamp(42px, 9vw, 65px);
-    line-height: 1.1;
-  }
-
-
-  /* Right Side */
-
-  .main-section-right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  /* Card */
-
-  .tradition-cards {
-    width: 100%;
-    max-width: 350px;
-    min-height: auto;
-
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-
-  /* Person Image */
-
-  .tradition-cards .instruments {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .tradition-cards img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-
-  /* Name */
-
-  .tradition-cards h2 {
-    font-size: 25px;
-    margin-top: 15px;
-  }
-
-  .tradition-cards p {
-    font-size: 13px;
-    margin-top: 5px;
-  }
-
-}
-
-@media (max-width: 800px) {
-  .tradition{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .tradition-grid{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-
-  }
-}
-

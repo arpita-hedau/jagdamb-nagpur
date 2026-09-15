@@ -22,14 +22,6 @@ import img3 from "./assets/img-3.jpeg";
 import img6 from "./assets/img-6.jpeg";
 import img7 from "./assets/img-7.jpeg";
 
-
-
-
-
-
-
-
-
 const gallery = [
   {
     image: ganeshotsav,
@@ -44,28 +36,23 @@ const gallery = [
     title: "उत्सवाचा जल्लोष",
   },
   {
-    image:
-      img6,
+    image: img6,
     title: "पथकाची ऊर्जा",
   },
-   {
-    image:
-      img7,
+  {
+    image: img7,
     title: "उत्साहाची लय",
   },
-   {
-    image:
-      img3,
+  {
+    image: img3,
     title: "परंपरेचा अभिमान",
   },
-   {
-    image:
-      img4,
+  {
+    image: img4,
     title: "परंपरेची शान",
   },
-   {
-    image:
-      img5,
+  {
+    image: img5,
     title: "जोशाची गर्जना",
   },
 ];
@@ -73,7 +60,7 @@ const gallery = [
 function App() {
   return (
     <div className="site">
-      {/* HERO */}
+      {/* ************************ HERO************************** */}
       <section className="hero">
         <div className="hero-image">
           <picture>
@@ -82,21 +69,18 @@ function App() {
             <img src={heroLandscape} alt="उत्सव" />
           </picture>
         </div>
-
-      
       </section>
-
       {/* INTRO */}
-      <section className="intro" id="about"
-       style={{
-    backgroundImage: `linear-gradient(
+      <section
+        className="intro"
+        id="about"
+        style={{
+          backgroundImage: `linear-gradient(
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ), url(${Maharaj})`,
-  }}
+        }}
       >
-        
-
         <div className="intro-content">
           <p className="section-label">जगदंब विषयी</p>
 
@@ -118,19 +102,19 @@ function App() {
           </p>
         </div>
       </section>
-
-
-      {/* TRADITION */}
-      <section className="tradition" id="tradition">
-        <div className="main-section-heading">
-          <div className="section-heading-left"
-          style={{
-    backgroundImage: `
+      {/* ***********************TRADITION***************************************** */}
+      <section
+        className="tradition"
+        id="tradition"
+        style={{
+          backgroundImage: `
       linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
       url(${sher})
     `,
-  }}
-          >
+        }}
+      >
+        <div className="main-section-heading">
+          <div className="section-heading-left">
             <p className="section-label">आमची ओळख</p>
 
             <h2>
@@ -153,7 +137,7 @@ function App() {
         </div>
 
         <div className="tradition-grid">
-           <div className="tradition-card">
+          <div className="tradition-card">
             {/* <div className="card-number">०३</div> */}
             <div className="instrument">
               <img src={atharv} alt="जगदंब" />
@@ -172,9 +156,7 @@ function App() {
             <p>प्रत्येक ठोक्यात ऊर्जा, जोश आणि उत्साह.</p>
           </div>
 
-          
-
-           <div className="tradition-card">
+          <div className="tradition-card">
             {/* <div className="card-number">०१</div> */}
             <div className="instrument">
               <img src={devanshu} alt="जगदंब" />
@@ -193,16 +175,14 @@ function App() {
             <h2>ताशा प्रमुख</h2>
             <p>ताल आणि लयीतून निर्माण होणारा उत्सवाचा नाद.</p>
           </div>
-
-         
         </div>
       </section>
-
-      {/* JOURNEY */}
-      <section className="journey"
-  style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${contactImage})`,
-  }}
+      {/* ************************JOURNEY******************************* */}
+      <section
+        className="journey"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${contactImage})`,
+        }}
       >
         <div className="section-heading">
           <p className="section-label">आमचा प्रवास</p>
@@ -240,8 +220,7 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* GALLERY */}
+      {/* *******************************GALLERY**************************** */}
       <section className="gallery-section" id="gallery">
         <div className="gallery-heading">
           <div>
@@ -271,43 +250,18 @@ function App() {
           ))}
         </div>
       </section>
-
-      {/* JOIN */}
-      {/* <section className="join" id="join">
-
-        <div className="join-bg"></div>
-
-        <div className="join-content">
-
-          <p className="section-label">जगदंब परिवार</p>
-
-          <h2>
-            तुम्हालाही
-            <br />
-            <span>या नादाचा भाग व्हायचंय?</span>
-          </h2>
-
-          <p>
-            तुमच्यात उत्साह आहे? तालाची आवड आहे?
-            मग या प्रवासाचा एक भाग बना.
-          </p>
-
-          <a href="#contact" className="primary-btn">
-            सहभागी व्हा →
-          </a>
-
-        </div>
-
-      </section> */}
-
-      {/* CONTACT */}
-      <section className="contact" id="contact"
-      style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${journeyImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}>
+    
+      {/* ********************************** CONTACT **************************************** */}
+      <section
+        className="contact"
+        id="contact"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(${journeyImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="contact-left">
           <p className="section-label">संपर्क</p>
 
@@ -342,26 +296,27 @@ function App() {
           </a>
         </div>
       </section>
-
-      {/* FOOTER */}
+      {/* ************************** FOOTER **************************************** */}
       <footer>
         <div className="footer-logo logo">
           <span>
             <img src={jagdamb} alt="जगदंब" />
           </span>
           <div>
-            <strong>जगदंब</strong><br></br>
+            <strong>जगदंब</strong>
+            <br></br>
             <small>ढोल ताशा पथक </small>
             <small>2019</small>
           </div>
         </div>
 
-       <div className="parampara"> <p>परंपरेचा नाद जपूया. संस्कृती पुढे नेऊया.</p>
-
-        <span> जगदंब, नागपूर</span><br />
-        <h6>~created by Elvrix TechSolution</h6>
+        <div className="parampara">
+          {" "}
+          <p>परंपरेचा नाद जपूया. संस्कृती पुढे नेऊया.</p>
+          <span> जगदंब, नागपूर</span>
+          <br />
+          <h6>~created by Elvrix TechSolution</h6>
         </div>
-       
       </footer>
     </div>
   );
